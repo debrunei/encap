@@ -4,24 +4,24 @@ public class main {
         Rectangle rectangle2 = new Rectangle(4, 4, "inch");
         Rectangle unitrectangle = new Rectangle(7, 7);
         Rectangle square = new Rectangle(3, "m");
-        Rectangle defaultrect = new Rectangle();
+        Rectangle default_rect = new Rectangle();
 
         System.out.println("=== Rectangle Calculator Demo ===");
         System.out.println("Rectangle " + rectangle1.getId() + " created");
         System.out.println("Rectangle " + rectangle2.getId() + " created");
         System.out.println("Rectangle " + unitrectangle.getId() + " created");
         System.out.println("Rectangle " + square.getId() + " created");
-        System.out.println("Rectangle " + defaultrect.getId() + " created");
+        System.out.println("Rectangle " + default_rect.getId() + " created");
 
-        System.out.println("");
+        System.out.println();
 
         System.out.println("Rectangle 1:" + rectangle1);
         System.out.println("Rectangle 2:" + rectangle2);
         System.out.println("Rectangle 3:" + unitrectangle);
         System.out.println("Rectangle 3:" + square);
-        System.out.println("Rectangle 3:" + defaultrect);
+        System.out.println("Rectangle 3:" + default_rect);
 
-        System.out.println("");
+        System.out.println();
         System.out.println("=== Calculation Tests ===");
 
         System.out.println("Rectangle id :" + rectangle1.getId() + " (" + rectangle1.getLength() + " x " + rectangle1.getWidth() + "):");
@@ -50,6 +50,8 @@ public class main {
 
         System.out.println("=== Scaling Tests ===");
         System.out.println("Original rectangle: " + rectangle1);
-        System.out.println("New rectangle: " + rectangle1.scale(2));
+        rectangle1.scale(2);
+        System.out.println("New rectangle: " + rectangle1);
+        System.out.println("Area: " + rectangle1.calculateArea());
     }
 }
